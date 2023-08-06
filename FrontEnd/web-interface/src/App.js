@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import ReviewInput from './Components/Review_Input';
+import ReviewOutput from './Components/Review_Output';
+import axios from "axios"
 
 function App() {
+  const [prediction, setPrediction] = useState(null);
+
+  const handlePredict = (review) => {
+    // Perform API call to your ML model here
+    // Set the prediction using setPrediction(result)
+    // For simplicity, using a mock prediction
+    const mockPrediction = Math.random() < 0.5 ? 0 : 1;
+    setPrediction(mockPrediction);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>Restaurant Review Sentiment Analysis</h1>
+        <ReviewInput onPredict={handlePredict} />
+        {prediction !== null && <ReviewOutput prediction={prediction} />}
     </div>
   );
 }
