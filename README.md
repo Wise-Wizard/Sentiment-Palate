@@ -2,7 +2,7 @@
 
 ---
 
-# SentimentPalate: Restaurant Review Sentiment Analysis
+# Sentiment Palate: Restaurant Review Sentiment Analysis
 
 SentimentPalate is a powerful tool that leverages Natural Language Processing (NLP) techniques to analyze and predict the sentiment of restaurant reviews. Whether you're a food enthusiast, a restaurateur, or a data enthusiast, SentimentPalate offers valuable insights into customer opinions and helps you understand the overall sentiment surrounding dining experiences.
 
