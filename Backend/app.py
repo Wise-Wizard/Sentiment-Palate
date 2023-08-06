@@ -13,6 +13,7 @@ classifier = sentitment_model['classifier']
 # Initialize App
 app = FastAPI()
 
+
 # GET Route
 
 
