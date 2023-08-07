@@ -1,27 +1,54 @@
-import React, { useState } from "react";
-import ReviewInput from "./Components/Review_Input";
-import ReviewOutput from "./Components/Review_Output";
-import axios from "axios";
+import React from "react";
+import {
+  AboutUs,
+  Chef,
+  FindUs,
+  Footer,
+  Gallery,
+  Header,
+  Intro,
+  Laurels,
+  SpecialMenu,
+} from "./container";
+import { Navbar } from "./components";
+import "./App.css";
 
-function App() {
-  const [prediction, setPrediction] = useState(null);
-
-  const handlePredict = async (review) => {
-    let response = await axios.post("http://localhost:8000/predict/", {
-      customer_review: review,
-    });
-    console.log(response)
-    const mockPrediction = Math.random() < 0.5 ? 0 : 1;
-    setPrediction(mockPrediction);
-  };
-
-  return (
-    <div className="App">
-      <h1>Restaurant Review Sentiment Analysis</h1>
-      <ReviewInput onPredict={handlePredict} />
-      {prediction !== null && <ReviewOutput prediction={prediction} />}
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <Navbar />
+    <Header />
+    <AboutUs />
+    <SpecialMenu />
+    <Chef />
+    <Intro />
+    <Laurels />
+    <Gallery />
+    <FindUs />
+    <Footer />
+  </div>
+);
 
 export default App;
+
+// function App() {
+//   const [prediction, setPrediction] = useState(null);
+
+//   const handlePredict = async (review) => {
+//     let response = await axios.post("http://localhost:8000/predict/", {
+//       customer_review: review,
+//     });
+//     console.log(response.data)
+//     let sentiment = response.data.sentiment_review
+//     setPrediction(sentiment);
+//   };
+
+//   return (
+//     <div className="App">
+//       <h1>Restaurant Review Sentiment Analysis</h1>
+//       <ReviewInput onPredict={handlePredict} />
+//       {prediction !== null && <ReviewOutput prediction={prediction} />}
+//     </div>
+//   );
+// }
+
+// export default App;
