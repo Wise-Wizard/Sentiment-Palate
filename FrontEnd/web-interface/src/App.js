@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   AboutUs,
   Chef,
@@ -13,7 +13,6 @@ import {
 } from "./container";
 import { Navbar } from "./components";
 import "./App.css";
-import axios from "axios";
 
 const App = () => {
   return (
@@ -22,7 +21,7 @@ const App = () => {
       <Header />
       <AboutUs />
       <SpecialMenu />
-      <Review/>
+      <Review />
       <Chef />
       <Intro />
       <Laurels />
