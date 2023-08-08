@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useState } from "react";
 
 const ReviewOutput = ({ prediction }) => {
+  let userSentiment;
+  if (prediction === "Positive") {
+    userSentiment =
+      "Great! Your review is positive. Thank you for your feedback!";
+  }
+  if (prediction === "Negative") {
+    userSentiment =
+      "Oops! Your review is negative. We apologize for any inconvenience.";
+  }
   return (
-    <div >
-      <h2>Sentiment Prediction</h2>
-      <p>{prediction}</p>
+    <div>
+      <h5 className="p__cormorant">{userSentiment} </h5>
     </div>
   );
 };

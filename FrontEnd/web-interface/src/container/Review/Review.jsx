@@ -1,15 +1,28 @@
 import React, { useState } from "react";
+import ReviewOutput from "./Review_Output";
+import axios from "axios";
 import "./Review.css";
 
-const Review = ({ onPredict }) => {
+const Review = () => {
   const [review, setReview] = useState("");
+  const [prediction, setPrediction] = useState(null);
 
   const handleInputChange = (e) => {
     setReview(e.target.value);
   };
 
-  const handlePredictClick = () => {
-    onPredict(review);
+  const handlePredict = async (review) => {
+    try {
+      const response = await axios.post("http://localhost:8000/predict/", {
+        customer_review: review,
+      });
+
+      const sentiment = response.data.sentiment_review;
+      setPrediction(sentiment);
+    } catch (error) {
+      console.error("Error predicting sentiment:", error);
+      setPrediction(null);
+    }
   };
 
   return (
@@ -29,11 +42,14 @@ const Review = ({ onPredict }) => {
         <button
           type="button"
           className="custom__button"
-          onClick={handlePredictClick}
+          onClick={() => handlePredict(review)} // Pass review to the handler
           style={{ margin: "auto", marginTop: "20px" }}
         >
           <span className="p__cormorant">Submit Review</span>
         </button>
+        <div style={{ marginTop: "25px" }}>
+          {prediction !== null && <ReviewOutput prediction={prediction} />}
+        </div>
       </div>
     </div>
   );
