@@ -1,14 +1,13 @@
 
-
 ---
 
 # Sentiment Palate: Restaurant Review Sentiment Analysis
 
-SentimentPalate is a powerful tool that leverages Natural Language Processing (NLP) techniques to analyze and predict the sentiment of restaurant reviews. Whether you're a food enthusiast, a restaurateur, or a data enthusiast, SentimentPalate offers valuable insights into customer opinions and helps you understand the overall sentiment surrounding dining experiences.
+SentimentPalate is a powerful tool that utilizes Natural Language Processing (NLP) techniques to analyze and predict the sentiment of restaurant reviews. Whether you're a food enthusiast, a restaurateur, or a data enthusiast, SentimentPalate offers valuable insights into customer opinions and helps you understand the overall sentiment surrounding dining experiences.
 
 ## Overview
 
-SentimentPalate utilizes a robust NLP pipeline to preprocess and analyze restaurant reviews. It employs techniques such as tokenization, lemmatization, and stopword removal to clean the text data. The processed data is then transformed into a numerical representation using the Bag of Words model. The heart of the project lies in a trained Linear Support Vector Classifier (SVC) that predicts whether a review expresses a positive or negative sentiment.
+SentimentPalate employs a robust NLP pipeline to preprocess and analyze restaurant reviews. It employs techniques such as tokenization, lemmatization, and stopword removal to clean the text data. The processed data is then transformed into a numerical representation using the Bag of Words model. At its core, the project features a trained Linear Support Vector Classifier (SVC) that predicts whether a review expresses a positive or negative sentiment.
 
 ## Features
 
@@ -21,7 +20,7 @@ SentimentPalate utilizes a robust NLP pipeline to preprocess and analyze restaur
 ## Usage
 
 1. Install the required libraries by running `pip install -r requirements.txt`.
-2. Prepare your own dataset of restaurant reviews in a TSV file format.
+2. Prepare your dataset of restaurant reviews in TSV file format.
 3. Train the sentiment analysis model using the provided Jupyter Notebook (`SentimentAnalysis.ipynb`).
 4. Save the trained model and the CountVectorizer using Joblib.
 5. Use the trained model to predict sentiment for new restaurant reviews.
@@ -44,6 +43,14 @@ predicted_sentiment = classifier.predict(processed_review)
 print("Predicted Sentiment:", "Positive" if predicted_sentiment else "Negative")
 ```
 
+## Frontend Setup
+
+1. Navigate to the `Frontend/web-interface` directory.
+2. Install the required dependencies using `npm install`.
+3. Set up the base directory and build command in your Netlify deployment settings.
+
+![Sentiment Palate Logo](https://ibb.co/vDB2n9C)
+
 ## Contributors
 
 - Saransh Shankar (https://github.com/Wise-Wizard)
@@ -51,5 +58,7 @@ print("Predicted Sentiment:", "Positive" if predicted_sentiment else "Negative")
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
 
 ---
