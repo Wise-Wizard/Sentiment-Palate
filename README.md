@@ -49,7 +49,12 @@ print("Predicted Sentiment:", "Positive" if predicted_sentiment else "Negative")
 2. Install the required dependencies using `npm install`.
 3. Set up the base directory and build command in your Netlify deployment settings.
 
-![Sentiment Palate Logo](https://ibb.co/vDB2n9C)
+
+![Home Screen](https://github.com/Wise-Wizard/Sentiment-Palate/assets/103821431/b21f9c68-e5e8-4f76-bbd7-d9d276709f0d)
+![Positive Review](https://github.com/Wise-Wizard/Sentiment-Palate/assets/103821431/f222653e-8e09-4b89-8141-1d8f4543011e)
+![Negative Review](https://github.com/Wise-Wizard/Sentiment-Palate/assets/103821431/f824c939-6548-4db6-ac49-7f3ae3b8e773)
+
+
 
 ## Contributors
 
