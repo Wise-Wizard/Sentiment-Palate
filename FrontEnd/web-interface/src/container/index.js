@@ -7,7 +7,7 @@ import Header from "./Header/Header";
 import Intro from "./Intro/Intro";
 import Laurels from "./Laurels/Laurels";
 import SpecialMenu from "./Menu/SpecialMenu";
-import ReviewInput from "./Review/Review_Input";
+import Review from "./Review/Review";
 import ReviewOutput from "./Review/Review_Output";
 
 export {
@@ -20,6 +20,6 @@ export {
   Intro,
   Laurels,
   SpecialMenu,
-  ReviewInput,
+  Review,
   ReviewOutput,
 };

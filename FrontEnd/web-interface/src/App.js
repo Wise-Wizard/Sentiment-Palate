@@ -9,7 +9,7 @@ import {
   Intro,
   Laurels,
   SpecialMenu,
-  ReviewInput,
+  Review,
   ReviewOutput,
 } from "./container";
 import { Navbar } from "./components";
@@ -31,7 +31,7 @@ const App = () => {
       <Header />
       <AboutUs />
       <SpecialMenu />
-      <ReviewInput onPredict={handlePredict} />
+      <Review onPredict={handlePredict} />
       {prediction !== null && <ReviewOutput prediction={prediction} />}
       <Chef />
       <Intro />
