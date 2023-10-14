@@ -11,6 +11,7 @@ import {
   SpecialMenu,
   Review,
 } from "./container";
+import Predict from "./container/Predict/Predict";
 import { Navbar } from "./components";
 import "./App.css";
 
@@ -22,6 +23,7 @@ const App = () => {
       <AboutUs />
       <SpecialMenu />
       <Review />
+      <Predict />
       <Chef />
       <Intro />
       <Laurels />
